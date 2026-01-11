@@ -25,6 +25,7 @@ public class Controlador implements ActionListener, ItemListener, ListSelectionL
         addWindowListeners(this);
         refrescarTodo();
         iniciar();
+        activarBusquedasAutomaticas();
     }
 
     private void refrescarTodo() {
@@ -67,6 +68,7 @@ public class Controlador implements ActionListener, ItemListener, ListSelectionL
         vista.itemOpciones.addActionListener(listener);
         vista.itemSalir.addActionListener(listener);
         vista.itemDesconectar.addActionListener(listener);
+        vista.itemConectar.addActionListener(listener);
         vista.btnValidate.addActionListener(listener);
         vista.optionDialog.btnOpcionesGuardar.addActionListener(listener);
     }
@@ -220,6 +222,25 @@ public class Controlador implements ActionListener, ItemListener, ListSelectionL
                     );
                 }
                 break;
+            case "Conectar":
+                try {
+                    modelo.conectar();
+                    JOptionPane.showMessageDialog(
+                            vista,
+                            "Conectado correctamente a la base de datos",
+                            "Conexión",
+                            JOptionPane.INFORMATION_MESSAGE
+                    );
+                    refrescarTodo();
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(
+                            vista,
+                            "Error al conectar",
+                            "Error",
+                            JOptionPane.ERROR_MESSAGE
+                    );
+                }
+                break;
             case "Salir":
                 System.exit(0);
                 break;
@@ -296,11 +317,27 @@ public class Controlador implements ActionListener, ItemListener, ListSelectionL
                 borrarCamposSoftware();
             }
             break;
-            case "eliminarSoftware":
-                modelo.eliminarSoftware((Integer) vista.tablaSoftware.getValueAt(vista.tablaSoftware.getSelectedRow(), 0));
+            case "eliminarSoftware": {
+                int fila = vista.tablaSoftware.getSelectedRow();
+
+                if (fila == -1) {
+                    JOptionPane.showMessageDialog(
+                            vista,
+                            "Selecciona un software",
+                            "Aviso",
+                            JOptionPane.WARNING_MESSAGE
+                    );
+                    break;
+                }
+
+                int id = (Integer) vista.tablaSoftware.getValueAt(fila, 0);
+
+                modelo.eliminarSoftware(id);
                 borrarCamposSoftware();
                 refrescarSoftware();
                 break;
+            }
+
 
             case "anadirDesarrollador": {
                 try {
@@ -741,6 +778,129 @@ public class Controlador implements ActionListener, ItemListener, ListSelectionL
                 vista.textUrlLicencia.getText().isEmpty() ||
                 vista.textCosteLicencia.getText().isEmpty() ||
                 vista.comboTipoLicencia.getSelectedIndex() == -1;
+    }
+
+    private void activarBusquedasAutomaticas() {
+
+        vista.textBuscarSoftware.getDocument().addDocumentListener(new DocumentListener() {
+            private void filtrar() {
+                try {
+                    String texto = vista.textBuscarSoftware.getText().trim();
+                    if (texto.isEmpty()) {
+                        refrescarSoftware();
+                    } else {
+                        vista.tablaSoftware.setModel(
+                                construirTableModelSoftware(
+                                        modelo.buscarSoftwarePorNombre(texto)
+                                )
+                        );
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            public void insertUpdate(DocumentEvent e) {
+                filtrar();
+            }
+
+            public void removeUpdate(DocumentEvent e) {
+                filtrar();
+            }
+
+            public void changedUpdate(DocumentEvent e) {
+            }
+        });
+
+        vista.textBuscarDesarrollador.getDocument().addDocumentListener(new DocumentListener() {
+            private void filtrar() {
+                try {
+                    String texto = vista.textBuscarDesarrollador.getText().trim();
+                    if (texto.isEmpty()) {
+                        refrescarDesarrollador();
+                    } else {
+                        vista.tablaDesarrollador.setModel(
+                                construirTableModelDesarrollador(
+                                        modelo.buscarDesarrolladorPorNombre(texto)
+                                )
+                        );
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            public void insertUpdate(DocumentEvent e) {
+                filtrar();
+            }
+
+            public void removeUpdate(DocumentEvent e) {
+                filtrar();
+            }
+
+            public void changedUpdate(DocumentEvent e) {
+            }
+        });
+
+        vista.textBuscarCategoria.getDocument().addDocumentListener(new DocumentListener() {
+            private void filtrar() {
+                try {
+                    String texto = vista.textBuscarCategoria.getText().trim();
+                    if (texto.isEmpty()) {
+                        refrescarCategoria();
+                    } else {
+                        vista.tablaCategoria.setModel(
+                                construirTableModelCategoria(
+                                        modelo.buscarCategoriaPorNombre(texto)
+                                )
+                        );
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            public void insertUpdate(DocumentEvent e) {
+                filtrar();
+            }
+
+            public void removeUpdate(DocumentEvent e) {
+                filtrar();
+            }
+
+            public void changedUpdate(DocumentEvent e) {
+            }
+        });
+
+        vista.textBuscarLicencia.getDocument().addDocumentListener(new DocumentListener() {
+            private void filtrar() {
+                try {
+                    String texto = vista.textBuscarLicencia.getText().trim();
+                    if (texto.isEmpty()) {
+                        refrescarLicencia();
+                    } else {
+                        vista.tablaLicencia.setModel(
+                                construirTableModelLicencia(
+                                        modelo.buscarLicenciaPorNombre(texto)
+                                )
+                        );
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            public void insertUpdate(DocumentEvent e) {
+                filtrar();
+            }
+
+            public void removeUpdate(DocumentEvent e) {
+                filtrar();
+            }
+
+            public void changedUpdate(DocumentEvent e) {
+            }
+        });
     }
 
 

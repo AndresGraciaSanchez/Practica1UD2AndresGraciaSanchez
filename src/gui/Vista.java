@@ -56,6 +56,11 @@ public class Vista extends JFrame {
     public JButton modificarLicenciaButton;
     public JButton anadirLicenciaButton;
 
+    public JTextField textBuscarSoftware;
+    public JTextField textBuscarDesarrollador;
+    public JTextField textBuscarCategoria;
+    public JTextField textBuscarLicencia;
+
     public DefaultTableModel dtmSoftware;
     public DefaultTableModel dtmDesarrolladores;
     public DefaultTableModel dtmCategorias;
@@ -63,6 +68,7 @@ public class Vista extends JFrame {
 
     public JMenuItem itemOpciones;
     public JMenuItem itemDesconectar;
+    public JMenuItem itemConectar;
     public JMenuItem itemSalir;
 
     public OptionDialog optionDialog;
@@ -96,10 +102,13 @@ public class Vista extends JFrame {
         itemOpciones.setActionCommand("Opciones");
         itemDesconectar = new JMenuItem("Desconectar");
         itemDesconectar.setActionCommand("Desconectar");
+        itemConectar = new JMenuItem("Conectar");
+        itemConectar.setActionCommand("Conectar");
         itemSalir = new JMenuItem("Salir");
         itemSalir.setActionCommand("Salir");
         menu.add(itemOpciones);
         menu.add(itemDesconectar);
+        menu.add(itemConectar);
         menu.add(itemSalir);
         mbBar.add(menu);
         mbBar.add(Box.createHorizontalGlue());

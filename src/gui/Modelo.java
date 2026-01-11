@@ -34,11 +34,12 @@ public class Modelo {
         return adminPassword;
     }
 
-
-    void conectar() {
+    boolean conectar() {
         try {
             conexion = DriverManager.getConnection(
                     "jdbc:mysql://" + ip + ":3306/tienda_software", user, password);
+            return true;
+
         } catch (SQLException sqle) {
             try {
                 conexion = DriverManager.getConnection(
@@ -52,13 +53,15 @@ public class Modelo {
                     statement = conexion.prepareStatement(aQuery);
                     statement.executeUpdate();
                 }
-                assert statement != null;
-                statement.close();
+                if (statement != null) statement.close();
+
+                return true;
 
             } catch (SQLException | IOException e) {
                 e.printStackTrace();
             }
         }
+        return false;
     }
 
     private String leerFichero() throws IOException {
@@ -651,5 +654,52 @@ public class Modelo {
         }
     }
 
+    ResultSet buscarDesarrolladorPorNombre(String nombre) throws SQLException {
+        String sql = "SELECT iddesarrollador as 'ID', nombre, email, pais, fecharegistro " +
+                "FROM desarrolladores WHERE nombre LIKE ?";
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ps.setString(1, "%" + nombre + "%");
+        return ps.executeQuery();
+    }
+
+    ResultSet buscarCategoriaPorNombre(String nombre) throws SQLException {
+        String sql = "SELECT idcategoria as 'ID', nombre, descripcion, nivel " +
+                "FROM categorias WHERE nombre LIKE ?";
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ps.setString(1, "%" + nombre + "%");
+        return ps.executeQuery();
+    }
+
+    ResultSet buscarLicenciaPorNombre(String nombre) throws SQLException {
+        String sql = "SELECT idlicencia as 'ID', nombre, tipo, url, costesoporte " +
+                "FROM licencias WHERE nombre LIKE ?";
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ps.setString(1, "%" + nombre + "%");
+        return ps.executeQuery();
+    }
+
+    ResultSet buscarSoftwarePorNombre(String nombre) throws SQLException {
+
+        String sentenciaSql =
+                "SELECT s.idsoftware as 'ID', " +
+                        "s.nombre as 'Nombre', " +
+                        "s.version as 'Versión', " +
+                        "s.precio as 'Precio', " +
+                        "s.fechalanzamiento as 'Fecha de lanzamiento', " +
+                        "s.activo as 'Activo', " +
+                        "concat(d.iddesarrollador, ' - ', d.nombre) as 'Desarrollador', " +
+                        "concat(c.idcategoria, ' - ', c.nombre) as 'Categoría', " +
+                        "concat(l.idlicencia, ' - ', l.nombre) as 'Licencia' " +
+                        "FROM software s " +
+                        "INNER JOIN desarrolladores d ON d.iddesarrollador = s.iddesarrollador " +
+                        "INNER JOIN categorias c ON c.idcategoria = s.idcategoria " +
+                        "INNER JOIN licencias l ON l.idlicencia = s.idlicencia " +
+                        "WHERE s.nombre LIKE ?";
+
+        PreparedStatement sentencia = conexion.prepareStatement(sentenciaSql);
+        sentencia.setString(1, "%" + nombre + "%");
+
+        return sentencia.executeQuery();
+    }
 
 }

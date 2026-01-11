@@ -43,7 +43,7 @@
         <border type="none"/>
         <children>
           <grid id="c5859" binding="JPanelSoftware" layout-manager="FormLayout">
-            <rowspec value="center:d:grow"/>
+            <rowspec value="center:d:noGrow"/>
             <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:max(d;4px):noGrow"/>
             <rowspec value="top:4dlu:noGrow"/>
@@ -61,13 +61,17 @@
             <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:max(d;4px):noGrow"/>
             <rowspec value="top:4dlu:noGrow"/>
-            <rowspec value="center:425px:grow"/>
+            <rowspec value="center:220px:grow"/>
             <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:max(d;4px):noGrow"/>
             <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:max(d;4px):noGrow"/>
             <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:max(d;4px):noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
+            <rowspec value="center:max(d;4px):noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
+            <rowspec value="center:14px:noGrow"/>
             <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:max(d;4px):noGrow"/>
             <colspec value="fill:-189px:grow"/>
@@ -100,7 +104,9 @@
                   </grid>
                   <forms defaultalign-horz="false"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <foreground color="-16777216"/>
+                </properties>
               </component>
               <component id="a4192" class="javax.swing.JLabel">
                 <constraints>
@@ -120,7 +126,9 @@
                   </grid>
                   <forms defaultalign-horz="false"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <foreground color="-16777216"/>
+                </properties>
               </component>
               <component id="72db1" class="javax.swing.JLabel">
                 <constraints>
@@ -140,7 +148,9 @@
                   </grid>
                   <forms defaultalign-horz="false"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <foreground color="-16777216"/>
+                </properties>
               </component>
               <component id="eb701" class="javax.swing.JLabel">
                 <constraints>
@@ -158,7 +168,9 @@
                   <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                   <forms/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <foreground color="-16777216"/>
+                </properties>
               </component>
               <component id="69551" class="javax.swing.JLabel">
                 <constraints>
@@ -176,7 +188,9 @@
                   <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <foreground color="-16777216"/>
+                </properties>
               </component>
               <component id="626d" class="javax.swing.JLabel">
                 <constraints>
@@ -194,7 +208,9 @@
                   <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <foreground color="-16777216"/>
+                </properties>
               </component>
               <component id="56b9b" class="javax.swing.JLabel">
                 <constraints>
@@ -213,19 +229,30 @@
                   <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <enabled value="true"/>
+                  <foreground color="-16777216"/>
+                </properties>
               </component>
               <scrollpane id="6a51">
                 <constraints>
                   <grid row="18" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false" defaultalign-vert="false"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <background color="-7285249"/>
+                </properties>
                 <border type="none"/>
                 <children>
                   <component id="75e16" class="javax.swing.JTable" binding="tablaSoftware">
                     <constraints/>
-                    <properties/>
+                    <properties>
+                      <background color="-7285249"/>
+                      <foreground color="-1"/>
+                      <gridColor color="-16777216"/>
+                      <selectionBackground color="-16777216"/>
+                      <selectionForeground color="-1"/>
+                    </properties>
                   </component>
                 </children>
               </scrollpane>
@@ -235,6 +262,9 @@
                   <forms/>
                 </constraints>
                 <properties>
+                  <background color="-16777216"/>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
                   <text value="Añadir"/>
                 </properties>
               </component>
@@ -244,6 +274,9 @@
                   <forms/>
                 </constraints>
                 <properties>
+                  <background color="-16777216"/>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
                   <text value="Modificar"/>
                 </properties>
               </component>
@@ -253,6 +286,9 @@
                   <forms/>
                 </constraints>
                 <properties>
+                  <background color="-16777216"/>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
                   <text value="Eliminar"/>
                 </properties>
               </component>
@@ -269,16 +305,43 @@
               </component>
               <component id="b667a" class="javax.swing.JCheckBox" binding="checkBoxActivo">
                 <constraints>
-                  <grid row="16" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                  <forms/>
+                  <grid row="16" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
                 </constraints>
                 <properties>
-                  <text value="CheckBox"/>
+                  <background color="-7285249"/>
+                  <foreground color="-1"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="e3e33" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="28" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
+                  <text value="Buscar softwares registrados por nombre"/>
+                </properties>
+              </component>
+              <component id="9b38c" class="javax.swing.JTextField" binding="textBuscarSoftware">
+                <constraints>
+                  <grid row="30" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-16777216"/>
+                  <text value=""/>
                 </properties>
               </component>
             </children>
           </grid>
           <grid id="94809" binding="JPanelDesarrollador" layout-manager="FormLayout">
+            <rowspec value="center:max(d;4px):noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:d:noGrow"/>
             <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:max(d;4px):noGrow"/>
@@ -288,6 +351,12 @@
             <rowspec value="center:max(d;4px):noGrow"/>
             <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:d:grow"/>
+            <rowspec value="top:4dlu:noGrow"/>
+            <rowspec value="center:max(d;4px):noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
+            <rowspec value="center:max(d;4px):noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
+            <rowspec value="center:max(d;4px):noGrow"/>
             <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:max(d;4px):noGrow"/>
             <rowspec value="top:4dlu:noGrow"/>
@@ -300,93 +369,114 @@
             <constraints>
               <tabbedpane title="Desarrollador"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-7285249"/>
+            </properties>
             <border type="none"/>
             <children>
               <component id="a81fa" class="javax.swing.JLabel">
                 <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false" defaultalign-vert="false"/>
                 </constraints>
                 <properties>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
                   <text value="Nombre"/>
                 </properties>
               </component>
               <component id="b0517" class="javax.swing.JTextField" binding="textNombreDesarrollador">
-                <constraints>
-                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties>
-                  <text value=""/>
-                </properties>
-              </component>
-              <component id="8cc5f" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties>
-                  <text value="Email"/>
-                </properties>
-              </component>
-              <component id="66f1e" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties>
-                  <text value="Pais"/>
-                </properties>
-              </component>
-              <component id="e58fe" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties>
-                  <text value="Fecha de registro"/>
-                </properties>
-              </component>
-              <component id="4857a" class="javax.swing.JTextField" binding="textEmailDesarrollador">
                 <constraints>
                   <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
                   </grid>
                   <forms defaultalign-horz="false"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <foreground color="-16777216"/>
+                  <text value=""/>
+                </properties>
               </component>
-              <component id="c8b8e" class="javax.swing.JTextField" binding="textPaisDesarrollador">
+              <component id="8cc5f" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
+                  <text value="Email"/>
+                </properties>
+              </component>
+              <component id="66f1e" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="true"/>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
+                  <text value="Pais"/>
+                </properties>
+              </component>
+              <component id="e58fe" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
+                  <text value="Fecha de registro"/>
+                </properties>
+              </component>
+              <component id="4857a" class="javax.swing.JTextField" binding="textEmailDesarrollador">
                 <constraints>
                   <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
                   </grid>
                   <forms defaultalign-horz="false"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <foreground color="-16777216"/>
+                </properties>
+              </component>
+              <component id="c8b8e" class="javax.swing.JTextField" binding="textPaisDesarrollador">
+                <constraints>
+                  <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-16777216"/>
+                </properties>
               </component>
               <component id="88e99" class="com.github.lgooddatepicker.components.DatePicker" binding="dateRegistroDesarrollador">
                 <constraints>
-                  <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-                  <forms/>
-                </constraints>
-                <properties/>
-              </component>
-              <component id="712b2" class="javax.swing.JButton" binding="eliminarDesarrolladorButton">
-                <constraints>
-                  <grid row="14" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                   <forms/>
                 </constraints>
                 <properties>
+                  <foreground color="-16777216"/>
+                </properties>
+              </component>
+              <component id="712b2" class="javax.swing.JButton" binding="eliminarDesarrolladorButton">
+                <constraints>
+                  <grid row="16" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <forms/>
+                </constraints>
+                <properties>
+                  <background color="-16777216"/>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
                   <text value="Eliminar"/>
                 </properties>
               </component>
               <scrollpane id="797d0">
                 <constraints>
-                  <grid row="8" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <grid row="10" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false" defaultalign-vert="false"/>
                 </constraints>
                 <properties/>
@@ -394,31 +484,68 @@
                 <children>
                   <component id="d1e5e" class="javax.swing.JTable" binding="tablaDesarrollador">
                     <constraints/>
-                    <properties/>
+                    <properties>
+                      <background color="-7285249"/>
+                      <foreground color="-1"/>
+                      <gridColor color="-16777216"/>
+                      <selectionBackground color="-16777216"/>
+                      <selectionForeground color="-1"/>
+                    </properties>
                   </component>
                 </children>
               </scrollpane>
               <component id="27487" class="javax.swing.JButton" binding="modificarDesarrolladorButton">
                 <constraints>
-                  <grid row="12" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="14" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
                 </constraints>
                 <properties>
+                  <background color="-16777216"/>
+                  <enabled value="true"/>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
                   <text value="Modificar"/>
                 </properties>
               </component>
               <component id="334c8" class="javax.swing.JButton" binding="anadirDesarrolladorButton">
                 <constraints>
-                  <grid row="10" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="12" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
                 </constraints>
                 <properties>
+                  <background color="-16777216"/>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
                   <text value="Añadir"/>
+                </properties>
+              </component>
+              <component id="4a605" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="20" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
+                  <text value="Buscar desarrolladores registrados por nombre"/>
+                </properties>
+              </component>
+              <component id="81bf9" class="javax.swing.JTextField" binding="textBuscarDesarrollador">
+                <constraints>
+                  <grid row="22" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-16777216"/>
                 </properties>
               </component>
             </children>
           </grid>
           <grid id="a3e1d" binding="JPanelCategoria" layout-manager="FormLayout">
+            <rowspec value="center:max(d;4px):noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:d:noGrow"/>
             <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:max(d;4px):noGrow"/>
@@ -426,6 +553,12 @@
             <rowspec value="center:max(d;4px):noGrow"/>
             <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:d:grow"/>
+            <rowspec value="top:4dlu:noGrow"/>
+            <rowspec value="center:max(d;4px):noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
+            <rowspec value="center:max(d;4px):noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
+            <rowspec value="center:max(d;4px):noGrow"/>
             <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:max(d;4px):noGrow"/>
             <rowspec value="top:4dlu:noGrow"/>
@@ -438,66 +571,85 @@
             <constraints>
               <tabbedpane title="Categoría"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-7285249"/>
+              <enabled value="true"/>
+            </properties>
             <border type="none"/>
             <children>
               <component id="143bd" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties>
-                  <text value="Nombre"/>
-                </properties>
-              </component>
-              <component id="99729" class="javax.swing.JTextField" binding="textNombreCategoria">
-                <constraints>
-                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties/>
-              </component>
-              <component id="f85b0" class="javax.swing.JLabel">
                 <constraints>
                   <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false"/>
                 </constraints>
                 <properties>
-                  <text value="Descripción"/>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
+                  <text value="Nombre"/>
                 </properties>
               </component>
-              <component id="af031" class="javax.swing.JTextArea" binding="textDescripcionCategoria">
+              <component id="99729" class="javax.swing.JTextField" binding="textNombreCategoria">
                 <constraints>
-                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="50"/>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
                   </grid>
-                  <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                  <forms defaultalign-horz="false"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <foreground color="-16777216"/>
+                </properties>
               </component>
-              <component id="e76cb" class="javax.swing.JLabel">
+              <component id="f85b0" class="javax.swing.JLabel">
                 <constraints>
                   <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false"/>
                 </constraints>
                 <properties>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
+                  <text value="Descripción"/>
+                </properties>
+              </component>
+              <component id="af031" class="javax.swing.JTextArea" binding="textDescripcionCategoria">
+                <constraints>
+                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <forms defaultalign-horz="false" defaultalign-vert="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-16777216"/>
+                  <rows value="3"/>
+                  <wrapStyleWord value="false"/>
+                </properties>
+              </component>
+              <component id="e76cb" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="true"/>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
                   <text value="Nivel"/>
                 </properties>
               </component>
               <component id="c30a1" class="javax.swing.JButton" binding="eliminarCategoriaButton">
                 <constraints>
-                  <grid row="12" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="14" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
                 </constraints>
                 <properties>
+                  <background color="-16777216"/>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
                   <text value="Eliminar"/>
                 </properties>
               </component>
               <scrollpane id="8c381">
                 <constraints>
-                  <grid row="6" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <grid row="8" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false" defaultalign-vert="false"/>
                 </constraints>
                 <properties/>
@@ -505,38 +657,76 @@
                 <children>
                   <component id="4d91d" class="javax.swing.JTable" binding="tablaCategoria">
                     <constraints/>
-                    <properties/>
+                    <properties>
+                      <background color="-7285249"/>
+                      <foreground color="-1"/>
+                      <gridColor color="-16777216"/>
+                      <selectionBackground color="-16777216"/>
+                      <selectionForeground color="-1"/>
+                    </properties>
                   </component>
                 </children>
               </scrollpane>
               <component id="ce312" class="javax.swing.JButton" binding="modificarCategoriaButton">
                 <constraints>
-                  <grid row="10" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="12" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
                 </constraints>
                 <properties>
+                  <background color="-16777216"/>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
                   <text value="Modificar"/>
                 </properties>
               </component>
               <component id="d1d7" class="javax.swing.JButton" binding="anadirCategoriaButton">
                 <constraints>
-                  <grid row="8" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="10" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
                 </constraints>
                 <properties>
+                  <background color="-16777216"/>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
                   <text value="Añadir"/>
                 </properties>
               </component>
               <component id="e0be5" class="javax.swing.JComboBox" binding="comboNivelCategoria">
                 <constraints>
-                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <foreground color="-16777216"/>
+                </properties>
+              </component>
+              <component id="45674" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="18" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
+                  <text value="Buscar categorías registradas por nombre"/>
+                </properties>
+              </component>
+              <component id="e6530" class="javax.swing.JTextField" binding="textBuscarCategoria">
+                <constraints>
+                  <grid row="20" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-16777216"/>
+                </properties>
               </component>
             </children>
           </grid>
           <grid id="8ba05" binding="JPanelLicencia" layout-manager="FormLayout">
+            <rowspec value="center:max(d;4px):noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:d:noGrow"/>
             <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:max(d;4px):noGrow"/>
@@ -552,27 +742,37 @@
             <rowspec value="center:max(d;4px):noGrow"/>
             <rowspec value="top:4dlu:noGrow"/>
             <rowspec value="center:max(d;4px):noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
+            <rowspec value="center:max(d;4px):noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
+            <rowspec value="center:max(d;4px):noGrow"/>
+            <rowspec value="top:4dlu:noGrow"/>
+            <rowspec value="center:max(d;4px):noGrow"/>
             <colspec value="fill:d:grow"/>
             <colspec value="left:4dlu:noGrow"/>
-            <colspec value="fill:416px:grow"/>
+            <colspec value="fill:543px:grow"/>
             <constraints>
               <tabbedpane title="Licencia"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-7285249"/>
+            </properties>
             <border type="none"/>
             <children>
               <component id="66bf1" class="javax.swing.JLabel">
                 <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false"/>
                 </constraints>
                 <properties>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
                   <text value="Nombre"/>
                 </properties>
               </component>
               <component id="2bdda" class="javax.swing.JTextField" binding="textNombreLicencia">
                 <constraints>
-                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
                   </grid>
                   <forms defaultalign-horz="false"/>
@@ -581,41 +781,38 @@
               </component>
               <component id="1686a" class="javax.swing.JLabel">
                 <constraints>
-                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false"/>
                 </constraints>
                 <properties>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
                   <text value="Tipo"/>
                 </properties>
               </component>
               <component id="9b69f" class="javax.swing.JLabel">
                 <constraints>
-                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false"/>
                 </constraints>
                 <properties>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
                   <text value="Url"/>
                 </properties>
               </component>
               <component id="1a9dc" class="javax.swing.JLabel">
                 <constraints>
-                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false"/>
                 </constraints>
                 <properties>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
                   <text value="Coste de soporte"/>
                 </properties>
               </component>
               <component id="108af" class="javax.swing.JTextField" binding="textUrlLicencia">
-                <constraints>
-                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                  <forms defaultalign-horz="false"/>
-                </constraints>
-                <properties/>
-              </component>
-              <component id="8b22" class="javax.swing.JTextField" binding="textCosteLicencia">
                 <constraints>
                   <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -624,25 +821,37 @@
                 </constraints>
                 <properties/>
               </component>
+              <component id="8b22" class="javax.swing.JTextField" binding="textCosteLicencia">
+                <constraints>
+                  <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties/>
+              </component>
               <component id="3401d" class="javax.swing.JComboBox" binding="comboTipoLicencia">
                 <constraints>
-                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
                 </constraints>
                 <properties/>
               </component>
               <component id="7422a" class="javax.swing.JButton" binding="eliminarLicenciaButton">
                 <constraints>
-                  <grid row="14" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="16" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
                 </constraints>
                 <properties>
+                  <background color="-16777216"/>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
                   <text value="Eliminar"/>
                 </properties>
               </component>
               <scrollpane id="74f5e">
                 <constraints>
-                  <grid row="8" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <grid row="10" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                   <forms defaultalign-horz="false" defaultalign-vert="false"/>
                 </constraints>
                 <properties/>
@@ -650,26 +859,61 @@
                 <children>
                   <component id="556b0" class="javax.swing.JTable" binding="tablaLicencia">
                     <constraints/>
-                    <properties/>
+                    <properties>
+                      <background color="-7285249"/>
+                      <foreground color="-1"/>
+                      <gridColor color="-16777216"/>
+                      <selectionBackground color="-16777216"/>
+                      <selectionForeground color="-1"/>
+                    </properties>
                   </component>
                 </children>
               </scrollpane>
               <component id="1dfd8" class="javax.swing.JButton" binding="modificarLicenciaButton">
                 <constraints>
-                  <grid row="12" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="14" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
                 </constraints>
                 <properties>
+                  <background color="-16777216"/>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
                   <text value="Modificar"/>
                 </properties>
               </component>
               <component id="66a83" class="javax.swing.JButton" binding="anadirLicenciaButton">
                 <constraints>
-                  <grid row="10" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="12" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                   <forms/>
                 </constraints>
                 <properties>
+                  <background color="-16777216"/>
+                  <enabled value="true"/>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
                   <text value="Añadir"/>
+                </properties>
+              </component>
+              <component id="c99a" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="20" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <font name="Liberation Mono" size="14"/>
+                  <foreground color="-1"/>
+                  <text value="Buscar licencias registradas por nombre"/>
+                </properties>
+              </component>
+              <component id="ed6e1" class="javax.swing.JTextField" binding="textBuscarLicencia">
+                <constraints>
+                  <grid row="22" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                  <forms defaultalign-horz="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-16777216"/>
                 </properties>
               </component>
             </children>

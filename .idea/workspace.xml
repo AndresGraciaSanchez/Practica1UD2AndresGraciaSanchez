@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af4bb955-99e7-4600-8638-af52012079e7" name="Default Changelist" comment="" />
+    <list default="true" id="af4bb955-99e7-4600-8638-af52012079e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Controlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Modelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/OptionDialog.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OptionDialog.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/OptionDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OptionDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Vista.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Vista.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Vista.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +43,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="37yIJ6ymmjllYFrDktsqvI5K8X2" />
   <component name="PropertiesComponent">
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="469" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="468" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -99,10 +113,22 @@
       <workItem from="1767949232699" duration="775000" />
       <workItem from="1768044249839" duration="22466000" />
       <workItem from="1768083816810" duration="5000" />
+      <workItem from="1768137455682" duration="7872000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
